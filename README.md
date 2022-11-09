@@ -1,3 +1,6 @@
+# Run Inference on multiple input
+Using the `run_multiple_detect.sh` script, provide the following environment virables directories`INPUT_DATASET`, `WEIGHT` (.pt) and result diretory `RESULT_DIR`. 
+
 # Official YOLOv7
 
 Implementation of paper - [YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors](https://arxiv.org/abs/2207.02696)
