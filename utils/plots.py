@@ -81,6 +81,15 @@ def plot_one_box_PIL(box, img, color=None, label=None, line_thickness=None):
         draw.text((box[0], box[1] - txt_height + 1), label, fill=(255, 255, 255), font=font)
     return np.asarray(img)
 
+def plot_crop(x, img):
+    # Plots one bounding box on image img
+    xmin = int(x[0])
+    ymin = int(x[1])
+    xmax = int(x[2])
+    ymax = int(x[3])
+    return img[ymin:ymax, xmin:xmax]
+    # cv2.rectangle(img, c1, c2, color, thickness=tl, lineType=cv2.LINE_AA)
+
 
 def plot_wh_methods():  # from utils.plots import *; plot_wh_methods()
     # Compares the two methods for width-height anchor multiplication
