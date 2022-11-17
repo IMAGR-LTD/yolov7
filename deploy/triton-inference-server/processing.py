@@ -26,7 +26,7 @@ def preprocess(img, input_shape, letter_box=True):
     return img
 
 def postprocess(num_dets, det_boxes, det_scores, det_classes, img_w, img_h, input_shape, letter_box=True):
-    boxes = det_boxes[0, :num_dets[0][0]] / np.array([input_shape[0], input_shape[1], input_shape[0], input_shape[1]], dtype=np.float32)
+    boxes = det_boxes[0, :num_dets[0][0]] / np.array([input_shape[1], input_shape[0], input_shape[1], input_shape[0]], dtype=np.float32)
     scores = det_scores[0, :num_dets[0][0]]
     classes = det_classes[0, :num_dets[0][0]].astype(np.int)
 
